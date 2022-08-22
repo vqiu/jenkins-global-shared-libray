@@ -28,11 +28,11 @@ def call(body) {
   
     environment {
 
-      REGISTRY_URL     = 'registry.haid.com.cn'
+      REGISTRY_URL     = 'registry.vqiu.cn'
       NAMESPACE        = "myhr-system"
       PROJECT_NAME     = "myhr"
       APP_NAME         = "${config.appName}"
-      EMAIL_RECIPIENTS = "tanyg@haid.com.cn,qiush01@haid.com.cn"
+      EMAIL_RECIPIENTS = "zhang3@vqiu.cn"
     }
   
     agent {
@@ -48,7 +48,7 @@ spec:
     jnlp: true
   containers:
   - name: dind
-    image: registry.haid.com.cn/library/docker-kubectl:2.0.1
+    image: registry.vqiu.cn/library/docker-kubectl:2.0.1
     imagePullPolicy: IfNotPresent
     command:
     - cat
@@ -140,7 +140,7 @@ spec:
          compressLog: true,
          mimeType: 'text/html',
          subject: "任务 \'${env.JOB_NAME}:${env.BUILD_NUMBER}\' - 应用构建报告[ ${currentBuild.result?:'SUCCESS'} ]",
-         from: "haid-gitlab@haid.com.cn",
+         from: "noreply@vqiu.cn",
          to: "${EMAIL_RECIPIENTS}"
       }
     }

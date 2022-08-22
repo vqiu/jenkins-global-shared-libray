@@ -31,7 +31,7 @@ def call(body) {
   
     environment {
 
-      REGISTRY_URL     = 'registry.haid.com.cn'
+      REGISTRY_URL     = 'registry.vqiu.cn'
       NAMESPACE        = "${config.nameSpace}"
       PROJECT_NAME     = "${config.projectName}"
       APP_NAME         = "${config.appName}"
