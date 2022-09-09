@@ -147,7 +147,7 @@ spec:
          compressLog: true,
          mimeType: 'text/html',
          subject: "任务 \'${env.JOB_NAME}:${env.BUILD_NUMBER}\' - 应用构建报告[ ${currentBuild.result?:'SUCCESS'} ]",
-         from: "haid-gitlab@haid.com.cn",
+         from: "noreply@vqiu.cn",
          to: "${EMAIL_RECIPIENTS}"
       }
     }
