@@ -51,7 +51,7 @@ spec:
     jnlp: true
   containers:
   - name: dind
-    image: registry.haid.com.cn/library/docker-kubectl:2.0.1
+    image: registry.vqiu.cn/library/docker-kubectl:2.0.1
     imagePullPolicy: IfNotPresent
     command:
     - cat
